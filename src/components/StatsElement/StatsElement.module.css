@@ -1,0 +1,20 @@
+.item {
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+}
+
+.label,
+.percentage {
+  font-size: 26px;
+  color: #fff;
+  font-weight: 700;
+}
+
+.label {
+  margin-bottom: 10px;
+  font-size: 16px;
+}

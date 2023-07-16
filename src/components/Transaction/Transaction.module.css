@@ -1,0 +1,25 @@
+.transaction {
+  margin: 0;
+  padding: 0;
+}
+
+.transaction:nth-child(2n) {
+  background-color: rgba(192, 192, 192, 0.452);
+}
+
+.type,
+.amount,
+.currency {
+  font-size: 14px;
+  text-align: center;
+  color: grey;
+
+  width: 200px;
+  height: 50px;
+}
+
+.type,
+.amount {
+  text-transform: capitalize;
+  border-right: 1px solid rgba(192, 192, 192, 0.882);
+}
