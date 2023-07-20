@@ -28,6 +28,12 @@ export const Item = styled.li`
   height: 80px;
   justify-content: center;
   align-items: center;
+
+  background-color: ${() => {
+    return `#${Math.floor(Math.random() * 16777215)
+      .toString(16)
+      .padStart(6, 0)}`;
+  }};
 `;
 
 export const Label = styled.span`
