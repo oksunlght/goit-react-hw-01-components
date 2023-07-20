@@ -1,17 +1,18 @@
 import PropTypes from 'prop-types';
 import { Transaction } from 'components/Transaction/Transaction';
-import css from './TransactionHistory.module.css';
+// import css from './TransactionHistory.module.css';
+import { Table, Head, Item } from './TransactionHistory.styled';
 
 export const TransactionHistory = ({ items }) => {
   return (
-    <table className={css.transactions}>
-      <thead className={css.head}>
+    <Table>
+      <Head>
         <tr>
-          <th className={css.head__item}>Type</th>
-          <th className={css.head__item}>Amount</th>
-          <th className={css.head__item}>Currency</th>
+          <Item>Type</Item>
+          <Item>Amount</Item>
+          <Item>Currency</Item>
         </tr>
-      </thead>
+      </Head>
 
       <tbody>
         {items.map(item => (
@@ -23,7 +24,7 @@ export const TransactionHistory = ({ items }) => {
           />
         ))}
       </tbody>
-    </table>
+    </Table>
   );
 };
 

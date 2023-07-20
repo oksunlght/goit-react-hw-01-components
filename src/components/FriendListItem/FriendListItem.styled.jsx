@@ -1,4 +1,6 @@
-.item {
+import styled from '@emotion/styled';
+
+export const Item = styled.li`
   display: flex;
   width: 350px;
   height: 120px;
@@ -10,36 +12,36 @@
   border: 1px solid rgb(141, 136, 136);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-}
 
-.item:not(:last-child) {
-  margin-bottom: 15px;
-}
+  &:not(:last-child) {
+    margin-bottom: 15px;
+  }
+`;
 
-.status {
+export const Status = styled.span`
   width: 16px;
   height: 16px;
   margin-right: 20px;
   border-radius: 50%;
-}
 
-.status.online {
-  background-color: rgb(38, 161, 38);
-}
+  background-color: ${({ status }) => {
+    if (status) {
+      return `rgb(38, 161, 38)`;
+    } else {
+      return `rgb(238, 85, 58)`;
+    }
+  }};
+`;
 
-.status.offline {
-  background-color: rgb(238, 85, 58);
-}
-
-.avatar {
+export const Avatar = styled.img`
   width: 75px;
   height: 75px;
   margin-right: 20px;
   border: 1px solid rgb(141, 136, 136);
   border-radius: 15%;
-}
+`;
 
-.name {
+export const Name = styled.p`
   font-size: 24px;
   font-weight: 700;
-}
+`;
